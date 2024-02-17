@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ekoindia:android-uidai-rdservice-manager:1.3.0@aar">
+    <CLASSES>
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/d2afba0eb642d918e9e89d3419b3f303/transformed/jetified-android-uidai-rdservice-manager-1.3.0/jars/classes.jar!/" />
+      <root url="file://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/d2afba0eb642d918e9e89d3419b3f303/transformed/jetified-android-uidai-rdservice-manager-1.3.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/modules-2/files-2.1/com.github.ekoindia/android-uidai-rdservice-manager/1.3.0/d8fd2dc81dd8415d46ba7d00f434b045497a171b/android-uidai-rdservice-manager-1.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">AmazePay</string>
+    <string name="app_nameh">AmazePay</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="job_success">Success</string>
+    <string name="ratings">Star Ratings</string>
+    <string name="about_me">About Me</string>
+    <string name="my_desc">AmazePay has been a presumed name in real land sector; the assemblage has carved a place of itself in offering housing and business explanations. AmazePay projects are allocated for their selection of site, structural design and affordability with the social order and patrons in mind..
+                 AmazePay  schemes are intended to be environs accommodating with plenty open room and current facilities catering to the choices and wants of a person. There are five principles which stand for our main viewpoint and ideas.</string>
+    <string name="contact">Contact</string>
+    <string name="Email">E-mail</string>
+    <string name="FatherName">Father Name</string>
+    <string name="Gender">Gender</string>
+    <string name="State">State</string>
+    <string name="City">City</string>
+    <string name="Pincode">Pincode</string>
+    <string name="DOB">DOB</string>
+    <string name="AadharNo">Aadhar No.</string>
+    <string name="Address">Address</string>
+    <string name="Save">Save</string>
+    <string name="ourApproch">Our Associates</string>
+    <string name="ourcustomers">Our Customers</string>
+    <string name="todaybussiness">Today Business</string>
+
+    <string name="sym_rs">&#8377;</string>
+
+    <string name="new_message_notification_placeholder_text_template">You said %1$s and lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel
+        semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
+        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
+        ornare lacus. Duis ac mauris sed massa congue volutpat.
+    </string>
+    <string name="title_activity_blocks">Blocks</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="nomage">NomAge:</string>
+    <string name="personal_details">PERSONAL DETAILS</string>
+    <string name="submit">Submit</string>
+</resources>

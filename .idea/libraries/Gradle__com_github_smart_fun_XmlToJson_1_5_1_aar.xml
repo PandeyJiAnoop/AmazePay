@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.smart-fun:XmlToJson:1.5.1@aar">
+    <CLASSES>
+      <root url="file://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/59cf26d01bf0873cf90d5b067aeb76bf/transformed/jetified-XmlToJson-1.5.1/AndroidManifest.xml" />
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/59cf26d01bf0873cf90d5b067aeb76bf/transformed/jetified-XmlToJson-1.5.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/modules-2/files-2.1/com.github.smart-fun/XmlToJson/1.5.1/c99e7044b440b6d7e86472a49266dfe97520e73c/XmlToJson-1.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

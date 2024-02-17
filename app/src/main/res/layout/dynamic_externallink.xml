@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="5dp"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lay_buy_on_phonepe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:id="@+id/ext_img"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Mobile \nRecharge"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:autoLink="web"
+                android:padding="4dp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+</androidx.cardview.widget.CardView>

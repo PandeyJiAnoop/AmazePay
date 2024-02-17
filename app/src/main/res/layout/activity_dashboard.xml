@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dashboard">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/ToolbarColoredBackArrow">
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/logo_img"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logofull" />
+                <ImageView android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/top_qr" />
+                <ImageView android:id="@+id/help_img" android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/top_help" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:openDrawer="start">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/ll_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </LinearLayout>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/navigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/Parrotgreen"
+                    android:visibility="gone"
+                    app:itemBackground="@color/Parrotgreen"
+                    app:itemIconTint="@drawable/bottom_navigation_selector"
+                    app:itemTextColor="@drawable/bottom_navigation_selector"
+                    app:menu="@menu/maindashboard" />
+            </LinearLayout>
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ScrollView
+                            android:layout_above="@+id/staic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <include layout="@layout/profile_header">
+                                </include>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:tint="@color/black"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_dashboard" />
+                                        <TextView
+                                            android:id="@+id/home_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="Home"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp" />
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <View android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+                                <androidx.cardview.widget.CardView 
+                                    android:layout_width="match_parent" android:visibility="gone"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_home" />
+                                        <TextView
+                                            android:id="@+id/add_fund_report_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="Add Fund Report"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp" />
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <View android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+
+                                <androidx.cardview.widget.CardView  android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:tint="@color/black"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_wallet1" />
+                                        <TextView
+                                            android:id="@+id/my_wallet_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="My Wallet"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_user" />
+                                        <TextView
+                                            android:id="@+id/profile_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="My Profile"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:tint="@color/black"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@android:drawable/ic_lock_lock" />
+                                        <TextView
+                                            android:id="@+id/pass_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="Change Password"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:orientation="vertical"
+                                        android:layout_height="wrap_content">
+                                        <LinearLayout android:id="@+id/trans_report_ll"
+                                            android:padding="5dp"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                            <ImageView
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+                                                android:tint="@color/black"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_gravity="center_vertical"
+                                                android:src="@drawable/ic_flat" />
+                                            <TextView
+                                                android:id="@+id/service_history_ll"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:clickable="true"
+                                                android:paddingRight="5dp"
+                                                android:drawableRight="@android:drawable/arrow_down_float"
+                                                android:gravity="center_vertical"
+                                                android:drawableTint="@color/black"
+                                                android:layout_gravity="center_vertical"
+                                                android:text="Transaction Report"
+                                                android:layout_marginLeft="10dp"
+                                                android:textColor="#000"
+                                                android:textSize="14dp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/hide_trans_ll"
+                                            android:visibility="gone"
+                                            android:layout_width="match_parent"
+                                            android:orientation="vertical"
+                                            android:layout_height="wrap_content">
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:background="@color/grey"
+                                                android:layout_height="0.1dp">
+                                            </View>
+                                            <TextView android:id="@+id/aeps_tv"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:clickable="true"
+                                                android:gravity="center_vertical"
+                                                android:layout_gravity="center_vertical"
+                                                android:text="AEPS"
+                                                android:padding="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:textColor="#000"
+                                                android:textSize="14dp"/>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:background="@color/grey"
+                                                android:layout_height="0.1dp">
+                                            </View>
+                                            <TextView android:id="@+id/dmt1_tv"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:clickable="true"
+                                                android:gravity="center_vertical"
+                                                android:layout_gravity="center_vertical"
+                                                android:text="DMT-1"
+                                                android:padding="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:textColor="#000"
+                                                android:textSize="14dp"/>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:background="@color/grey"
+                                                android:layout_height="0.1dp">
+                                            </View>
+                                            <TextView android:id="@+id/dmt_tv"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:clickable="true"
+                                                android:gravity="center_vertical"
+                                                android:layout_gravity="center_vertical"
+                                                android:text="DMT-2"
+                                                android:padding="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:textColor="#000"
+                                                android:textSize="14dp"/>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:orientation="vertical"
+                                        android:layout_height="wrap_content">
+                                        <LinearLayout
+                                            android:padding="5dp"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+                                            <ImageView
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp" android:tint="@color/black"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_gravity="center_vertical"
+                                                android:src="@drawable/credit" />
+                                            <TextView android:id="@+id/aeps_fund_ll"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:clickable="true"
+                                                android:paddingRight="5dp"
+                                                android:drawableRight="@android:drawable/arrow_down_float"
+                                                android:gravity="center_vertical"
+                                                android:drawableTint="@color/black"
+                                                android:layout_gravity="center_vertical"
+                                                android:text="Wallet Management"
+                                                android:layout_marginLeft="10dp"
+                                                android:textColor="#000"
+                                                android:textSize="14dp"
+                                                />
+                                        </LinearLayout>
+
+                                        <LinearLayout android:id="@+id/hide_aeps_fund_ll" android:visibility="gone"
+                                            android:layout_width="match_parent"
+                                            android:orientation="vertical"
+                                            android:layout_height="wrap_content">
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:background="@color/grey"
+                                                android:layout_height="0.1dp">
+                                            </View>
+                                            <TextView android:id="@+id/fund_req_tv"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:clickable="true"
+                                                android:gravity="center_vertical"
+                                                android:layout_gravity="center_vertical"
+                                                android:text="Fund Request"
+                                                android:padding="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:textColor="#000"
+                                                android:textSize="14dp"/>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:background="@color/grey"
+                                                android:layout_height="0.1dp">
+                                            </View>
+                                            <TextView android:id="@+id/fund_req_report_tv"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:clickable="true"
+                                                android:gravity="center_vertical"
+                                                android:layout_gravity="center_vertical"
+                                                android:text="Fund Request Report"
+                                                android:padding="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:textColor="#000"
+                                                android:textSize="14dp"/>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:background="@color/grey"
+                                                android:layout_height="0.1dp">
+                                            </View>
+                                            <TextView android:id="@+id/wallet_report_tv"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:clickable="true"
+                                                android:gravity="center_vertical"
+                                                android:layout_gravity="center_vertical"
+                                                android:text="Wallet Report"
+                                                android:padding="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:textColor="#000"
+                                                android:textSize="14dp"/>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:tint="@color/black"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_downline" />
+                                        <TextView
+                                            android:id="@+id/recharge_report_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="Recharge Report"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_registration" />
+                                        <TextView
+                                            android:id="@+id/faq_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="FAQ"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:tint="@color/black"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/electricity" />
+                                        <TextView
+                                            android:id="@+id/external_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="External Link"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"  android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_account_details" />
+                                        <TextView
+                                            android:id="@+id/privacy_policy_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="Privacy Policy"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"  android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_menu_share" />
+                                        <TextView
+                                            android:id="@+id/refer_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="Refer/Share App"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:padding="5dp"
+                                        android:orientation="horizontal"  android:paddingLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:src="@drawable/ic_logout" />
+                                        <TextView
+                                            android:id="@+id/logout_ll"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:clickable="true"
+                                            android:gravity="center_vertical"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="Logout"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="#000"
+                                            android:textSize="14dp"
+                                            />
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/grey"
+                                    android:layout_height="0.1dp">
+                                </View>
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="50dp"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:id="@+id/fb"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/fb"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="5dp"/>
+                                    <ImageView
+                                        android:id="@+id/telegram"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/insta"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="5dp"/>
+                                    <ImageView
+                                        android:id="@+id/youtube"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/youtube"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="5dp"/>
+                                    <ImageView
+                                        android:id="@+id/whatsap"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/whatsapp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="5dp"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </ScrollView>
+                        <ImageView  android:layout_alignParentBottom="true"
+                            android:id="@+id/staic"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:text="Version"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold|italic"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.google.android.material.navigation.NavigationView>
+        </androidx.drawerlayout.widget.DrawerLayout>
+    </LinearLayout>
+
+</LinearLayout>

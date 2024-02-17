@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    tools:context=".splashscrn">
+
+    <ImageView android:layout_centerInParent="true"
+        android:id="@+id/staic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:padding="20dp"
+        android:src="@drawable/logo"/>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_gravity="center"
+        android:tint="@color/white"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/logo"/>
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="bottom"
+        android:src="@drawable/loadingimg"
+        android:layout_below="@+id/staic"
+        android:adjustViewBounds="true" />
+
+
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/npb_progress"
+        style="@style/NumberProgressBar_Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone"
+        app:progress_current="0"
+        app:progress_max="100"
+        app:progress_text_color="@color/white"
+        app:progress_text_visibility="visible" />
+
+</RelativeLayout>

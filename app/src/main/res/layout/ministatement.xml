@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView android:textStyle="bold" android:id="@+id/mess_tv"
+        android:layout_width="match_parent"
+        android:text="sdgsgsdgsgdssgsdg"
+        android:gravity="center_vertical"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:background="@drawable/rectangle"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:layout_height="match_parent">
+    </TextView>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Balance Amount: - "
+            android:gravity="center_vertical"
+
+            android:textSize="15dp"
+
+
+            android:textColor="@color/black"
+
+            android:layout_height="match_parent">
+        </TextView>
+        <TextView android:id="@+id/bal_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1" android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            android:text="Transaction No"
+            android:gravity="center_vertical"
+            android:textSize="13dp"
+
+
+
+            android:textColor="@color/red"
+
+            android:layout_height="match_parent">
+        </TextView>
+    </LinearLayout>
+    <TextView android:textStyle="bold" android:id="@+id/dat_tv"
+        android:layout_width="match_parent"
+        android:text="sdgsgsdgsgdssgsdg"
+        android:gravity="center_vertical"
+        android:textSize="15dp" android:textAlignment="textEnd"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_height="match_parent">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rcvList"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"  android:id="@+id/exit"
+        android:text="Exit"
+        android:drawableLeft="@android:drawable/stat_notify_sync"
+        android:gravity="center" android:textStyle="bold"
+        android:background="#930A00"
+        android:paddingLeft="10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="#eee"
+    android:elevation="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton android:id="@+id/head_rb"
+            android:textStyle="bold"
+            android:text="AIRTEL 4GB +280 SMS "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </RadioButton>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/des_tv"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tv"
+            android:padding="5dp" android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView android:layout_gravity="end"
+            android:gravity="end" android:textColor="@color/red"
+            android:layout_width="wrap_content"
+            android:id="@+id/tv1"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

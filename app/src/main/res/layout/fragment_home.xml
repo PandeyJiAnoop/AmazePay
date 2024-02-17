@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.akp.amazepay.fragments.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/orange"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/menuImg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_dashboard"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Sunrise Tech Pvt. Ltd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold|italic" />
+        <ImageView
+            android:id="@+id/img_wallet"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toLeftOf="@+id/iv_notification"
+            android:src="@drawable/ic_account_details"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:id="@+id/iv_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                app:srcCompat="@drawable/ic_dashboard"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="-11dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="-10dp"
+                android:layout_toRightOf="@+id/iv_icon"
+                android:background="@drawable/ic_account_details"
+                android:backgroundTint="@color/black"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_logout"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/ic_logout" />
+        <ImageView
+            android:id="@+id/menudot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_dashboard" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:background="@drawable/ic_account_details"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_notify"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#FF1200"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_above="@id/rlBottom"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cardCornerRadius="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello!"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView android:id="@+id/mob_tv"
+                        android:textSize="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+91- 9696****** "
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            app:cardElevation="10dp"
+                            app:cardCornerRadius="5dp"
+                            android:id="@+id/total_active_team_ll"
+
+                            android:layout_height="70dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="match_parent">
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:layout_width="50dp"
+                                    android:padding="5dp" android:tint="@color/gold"
+                                    android:src="@drawable/ic_wallet1"
+                                    android:layout_height="@dimen/_50sdp">
+                                </ImageView>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginLeft="5dp"
+
+                                        android:textSize="17dp"
+                                        android:text=" Wallet Balance"
+                                        android:textColor="@color/black" />
+                                    <TextView
+                                        android:id="@+id/wallet_bal_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="21dp"
+                                        android:gravity="right|bottom"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_gravity="bottom"
+                                        android:text="00"
+                                        android:textStyle="bold"
+
+                                        android:textColor="@color/black"
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            android:visibility="gone"
+                            app:cardElevation="10dp"
+                            app:cardCornerRadius="5dp"
+
+                            android:id="@+id/total_incative_team_ll"
+                            android:layout_height="70dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="50dp" android:tint="@color/gold"
+                                    android:padding="5dp" android:src="@drawable/ic_wallet1"
+                                    android:layout_height="@dimen/_50sdp">
+                                </ImageView>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="10dp"
+                                        android:text="AEPS Balance"
+                                        android:textColor="@color/black"/>
+                                    <TextView
+                                        android:id="@+id/apis_bal_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="10sp"
+                                        android:gravity="right|bottom"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="5dp"
+                                        android:text="INR 00.00"
+                                        android:textColor="@color/black"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="160dp">
+                    <com.smarteist.autoimageslider.SliderLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/imageSlider"
+                            android:layout_height="match_parent"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:padding="5dp"
+                        android:src="@drawable/logo"
+                        android:layout_height="50dp">
+                    </ImageView>
+                </RelativeLayout>
+                
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView 
+                            android:textSize="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Most Visited Service"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:id="@+id/dmt_ll"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:elevation="10dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="70dp" android:padding="5dp"
+                                    android:layout_height="70dp"
+                                    android:src="@drawable/das_dmt"/>
+                                <TextView android:layout_gravity="center_horizontal"
+                                    android:textSize="11dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="DMT\nService"  android:gravity="center"
+                                    android:textColor="@color/black"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/nsdl_kyc_ll"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:elevation="10dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="70dp" android:padding="5dp"
+                                    android:layout_height="70dp" android:tint="#325B81"
+                                    android:src="@drawable/insurance"
+                                    />
+                                <TextView android:layout_gravity="center_horizontal"
+                                    android:textSize="11dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="NSDL KYC \nService"  android:gravity="center"
+                                    android:textColor="@color/black"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/nsdl_ll"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:elevation="10dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp" android:padding="5dp"
+                                    android:src="@drawable/das_adharpay" />
+                                <TextView android:layout_gravity="center_horizontal"
+                                    android:textSize="11dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="KYC AEPS\nService"  android:gravity="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/aeps_ll"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:elevation="10dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp" android:padding="5dp"
+                                    android:src="@drawable/das_aeps" />
+                                <TextView android:layout_gravity="center_horizontal"
+                                    android:textSize="11dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="AEPS\nService"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/uti_ll"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:elevation="10dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp" android:padding="5dp"
+                                    android:src="@drawable/das_pancard"
+                                    />
+                                <TextView android:layout_gravity="center_horizontal"
+                                    android:textSize="11dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="UTI\nService"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                  
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView android:layout_marginBottom="5dp"
+                            android:textSize="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bill Payment Service"
+                            android:gravity="center" android:padding="5dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            />
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout android:id="@+id/mobile_ll"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" android:padding="5dp"
+                                    android:src="@drawable/das_mobile"
+                                    />
+                                <TextView android:layout_marginBottom="5dp"
+                                    android:textSize="10dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" android:padding="5dp"
+                                    android:text="Mobile"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:id="@+id/dth_ll"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" android:padding="5dp"
+                                    android:src="@drawable/das_dth" />
+                                <TextView android:textSize="10dp"  android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content" android:padding="5dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="DTH"  android:gravity="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:gravity="center_horizontal" android:id="@+id/electricity_ll"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" android:padding="5dp"
+                                    android:src="@drawable/das_electricity"
+                                    />
+                                <TextView android:textSize="10dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Electricity"
+                                    android:gravity="center" android:padding="5dp"
+                                    android:id="@+id/wallet_tv"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout android:gravity="center_horizontal"
+                                android:id="@+id/water_ll"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" android:padding="5dp"
+                                    android:src="@drawable/das_insurance" />
+                                <TextView android:textSize="10dp"   android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content" android:padding="5dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="LIC"  android:gravity="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                            <LinearLayout android:gravity="center_horizontal"
+                                android:id="@+id/gaspay_ll"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="50dp" android:padding="5dp"
+                                    android:layout_height="50dp" android:tint="@color/gold"
+                                    android:src="@drawable/gas" />
+                                <TextView android:textSize="10dp"   android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content" android:padding="5dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gas Pay"  android:gravity="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center_horizontal"
+                                android:id="@+id/insurance_ll"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="50dp" android:padding="5dp"
+                                    android:layout_height="50dp" android:tint="@color/gold"
+                                    android:src="@drawable/ic_business" />
+                                <TextView android:textSize="10dp"   android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content" android:padding="5dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Insurance"  android:gravity="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="5dp"
+
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView android:layout_marginBottom="5dp"
+                            android:textSize="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Find &amp; Lost Documents"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            />
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout android:visibility="gone"
+                                android:id="@+id/aadhar_print_ll"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:tint="@color/black"
+                                    android:padding="5dp"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/top_qr"
+                                    />
+                                <TextView android:layout_marginBottom="5dp"
+                                    android:textSize="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Aadhar\nPrint"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:id="@+id/ayushman_print_ll"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:padding="5dp" android:tint="@color/gold"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_mydirect"
+                                    />
+                                <TextView android:textSize="12dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Aayushman\nPrint"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/findpanbyaadhar_ll"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:padding="5dp"
+                                    android:layout_width="50dp" android:tint="@color/gold"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/broadband"
+                                    />
+                                <TextView android:textSize="12dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Find Pan\nBY Adhar"
+                                    android:gravity="center"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp" android:visibility="gone"
+                                android:id="@+id/dl_print_ll"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:padding="5dp"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" android:tint="@color/black"
+                                    android:src="@drawable/credit" />
+                                <TextView android:textSize="12dp"  android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="DL\nPrint"  android:gravity="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView android:layout_marginBottom="5dp"
+                            android:textSize="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Account Opening"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            />
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/axis_bank_ll"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="50dp" android:padding="5dp"
+                                    android:src="@drawable/b_axis"
+                                    />
+                                <TextView android:layout_marginBottom="5dp"
+                                    android:textSize="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Axis Bank"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:id="@+id/hdfc_bank_ll"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="50dp" android:padding="5dp"
+                                    android:src="@drawable/b_hdfc"
+                                    />
+                                <TextView android:textSize="12dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="HDFC Bank"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:id="@+id/jupitar_bank_ll"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="50dp"  android:padding="5dp"
+                                    android:src="@drawable/b_insd"
+                                    />
+                                <TextView android:textSize="12dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="IndusInd"
+                                    android:gravity="center"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/kotak_bank_ll"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="50dp" android:padding="5dp"
+                                    android:src="@drawable/b_kotak"
+                                    />
+                                <TextView android:textSize="12dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kotak"
+                                    android:gravity="center"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView android:layout_marginBottom="5dp"
+                            android:textSize="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Goverment Services"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            />
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:padding="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout android:id="@+id/vridha_pension_ll"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:tint="@color/gold"
+                                    android:padding="5dp"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/gas"
+                                    />
+                                <TextView android:layout_marginBottom="5dp"
+                                    android:textSize="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vridha\nPension"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/widow_pension_ll"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:padding="5dp" android:tint="@color/gold"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_customer"
+                                    />
+                                <TextView android:textSize="12dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Widow\nPension"  android:gravity="center"
+                                    android:textColor="@color/black"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:id="@+id/viklank_pension_ll"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:padding="5dp"
+                                    android:layout_width="50dp" android:tint="@color/gold"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/fastag"
+                                    />
+                                <TextView android:textSize="12dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Viklank\nPension"
+                                    android:gravity="center"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+                            <LinearLayout  android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/utdt_card_ll"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <ImageView android:padding="5dp"
+                                    android:layout_width="50dp" android:tint="@color/gold"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/credit"
+                                    />
+                                <TextView android:textSize="12dp" android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="UDTD\nCard"
+                                    android:gravity="center"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlBottom"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            app:itemIconSize="20dp"
+            android:background="@color/colorAccent"
+            app:labelVisibilityMode="labeled"
+            app:elevation="5dp"
+            app:menu="@menu/menu"
+
+         app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_add_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:elevation="8dp" android:visibility="gone"
+            android:padding="5dp"
+            android:background="@drawable/oval"
+            app:layout_constraintStart_toStartOf="@+id/nav_view"
+            app:layout_constraintEnd_toEndOf="@+id/nav_view"
+            app:layout_constraintTop_toTopOf="@+id/nav_view"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_view"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

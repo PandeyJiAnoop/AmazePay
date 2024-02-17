@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AmazePay.iml" filepath="$PROJECT_DIR$/.idea/modules/AmazePay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aepsriseinlib/AmazePay.aepsriseinlib.iml" filepath="$PROJECT_DIR$/.idea/modules/aepsriseinlib/AmazePay.aepsriseinlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aepsriseinlib/AmazePay.aepsriseinlib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/aepsriseinlib/AmazePay.aepsriseinlib.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aepsriseinlib/AmazePay.aepsriseinlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/aepsriseinlib/AmazePay.aepsriseinlib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aepsriseinlib/AmazePay.aepsriseinlib.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/aepsriseinlib/AmazePay.aepsriseinlib.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AmazePay.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AmazePay.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AmazePay.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AmazePay.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AmazePay.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AmazePay.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AmazePay.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AmazePay.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

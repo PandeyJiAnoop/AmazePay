@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: D./Anoop_AprilProject2023/AmazePay/app/libs/onboard.aar">
+    <CLASSES>
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/c3cff0905de6fdaaf7281a1cb07c5a48/transformed/jetified-onboard/jars/classes.jar!/" />
+      <root url="file://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/c3cff0905de6fdaaf7281a1cb07c5a48/transformed/jetified-onboard/res" />
+      <root url="file://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/c3cff0905de6fdaaf7281a1cb07c5a48/transformed/jetified-onboard/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

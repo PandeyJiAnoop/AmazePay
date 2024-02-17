@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.akp.amazepay">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="stateHidden">
+        <activity
+            android:name=".rechargebills.GasBill"
+            android:exported="false" />
+        <activity
+            android:name=".rechargebills.InsuranceBillNew"
+            android:exported="false" />
+        <activity
+            android:name=".TransationFolder.DMT_Report_ManualPage"
+            android:exported="false" />
+        <activity
+            android:name=".rechargebills.InsuranceBill"
+            android:exported="false" />
+        <activity android:name=".Demo" />
+        <activity
+            android:name=".TransationFolder.AEPS_Report_PrintInvoicePage"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransationFolder.DMT_Report1_PrintInvoicePage"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransationFolder.Transaction_DMT1"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Webpage.Web_InsurancePayment"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Webpage.Web_DTHPayment"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Webpage.Web_GasPayment"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransationFolder.DMT_Report_PrintInvoicePage"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Webpage.Web_RechargeReport"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Webpage.Web_BillPayment"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Webpage.Web_Recharge"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AEPSWebview"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.ExternalLink"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fundfolder.Fund_Wallet_Report"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fundfolder.Fund_Request_Report"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fundfolder.Fund_Request"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransationFolder.Transaction_DMT"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransationFolder.Transaction_AEPS"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MoneyTransfer.DMTService"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_KYCBlock.KYC_UTI"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_KYCBlock.KYC_AEPS"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_KYCBlock.KYC_NSDL"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_KYCBlock.KYC_NSDLKYC"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_GovermentServices.GS_UDTDCard"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_GovermentServices.GS_ViklankPension"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_GovermentServices.GS_WidowPension"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_GovermentServices.GS_VridhaPension"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_AccountOpening.AO_kotakBank"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_AccountOpening.AO_JupitarBank"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_AccountOpening.AO_HDFCBank"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_AccountOpening.AO_AxisBank"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_FindLostDocuments.FL_DLPrint"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_FindLostDocuments.FL_FindPanByAdhar"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_FindLostDocuments.FL_AyushmanPrint"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_FindLostDocuments.FL_AadharPrint"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_BillPaymnet.MobileRecharge"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_BillPaymnet.Water"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_BillPaymnet.Electricity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_BillPaymnet.DTH"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Das_BillPaymnet.Mobile"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.FeedBackForm"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.PrivacyPolicy"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.FAQ"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.MyWallet"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.AddFundReport"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.ServiceWallet"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OTPVerify"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterModule.SignupForm"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterModule.RegisterMobile"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.TotalCustomerVisit"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.NewCustomerRegistartion"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SliderMenu.CustomerVisit"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Adapter.FullImagePage"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompanyProfile"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ChangePassword"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".editprofile"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".user_profile"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".MainActivityLogin"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".dashboard"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".rechargebills.DTHBill"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".rechargebills.ElectricityBill"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".rechargebills.New_MobileRecharge"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".rechargebills.ProviderList"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".rechargebills.WithdrawHistory"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".splashscrn"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA_eM-z5L19ZeYZMn7_zxmzpYPJlgx7UoM" /> <!-- <string name="google_api_key_latest">"AIzaSyA_eM-z5L19ZeYZMn7_zxmzpYPJlgx7UoM"</string> -->
+        <!-- <string name="google_server_key_latest">"AIzaSyA_eM-z5L19ZeYZMn7_zxmzpYPJlgx7UoM"</string> -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

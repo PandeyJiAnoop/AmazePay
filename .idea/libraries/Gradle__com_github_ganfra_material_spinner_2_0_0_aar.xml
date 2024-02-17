@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ganfra:material-spinner:2.0.0@aar">
+    <CLASSES>
+      <root url="file://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/0eb70ccb406ffc1467dbae8e99e6feb3/transformed/jetified-material-spinner-2.0.0/AndroidManifest.xml" />
+      <root url="file://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/0eb70ccb406ffc1467dbae8e99e6feb3/transformed/jetified-material-spinner-2.0.0/res" />
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/0eb70ccb406ffc1467dbae8e99e6feb3/transformed/jetified-material-spinner-2.0.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/modules-2/files-2.1/com.github.ganfra/material-spinner/2.0.0/7fd84a5f3f392a09154bff7ed93249e751570ffc/material-spinner-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

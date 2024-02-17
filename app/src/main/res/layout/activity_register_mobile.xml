@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityLogin">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/top_background2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="17dp"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Registration\nwith\nAmazePay"
+                    android:textColor="#fff"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/staic"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logo"/>
+            <LinearLayout
+                android:background="#90FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:text="Mobile Number*"
+                    android:textColor="@color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_shape"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText  android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_call"
+                            android:layout_marginRight="30dp"
+                            android:gravity="center_vertical"
+                            android:id="@+id/mob_et"
+                            android:layout_centerVertical="true"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:layout_width="match_parent"
+                            android:hint="Enter Mobile Number"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/get_otp_btn"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/drawer"
+                            android:text="Get OTP"
+                            android:textColor="@color/white"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/otp_ll"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="5dp"
+                        android:text="OTP*"
+                        android:textColor="@color/black" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/background_shape"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:orientation="horizontal">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText  android:drawableTint="#898989"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:drawableLeft="@drawable/ic_password"
+                                android:layout_marginRight="30dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/otp_et"
+                                android:layout_centerVertical="true"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:layout_width="match_parent"
+                                android:hint="Enter OTP"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:fadingEdgeLength="4dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/drawer"
+                android:drawableRight="@drawable/right_arrow"
+                android:drawableTint="@color/white"
+                android:elevation="20dp"
+                android:text="Submit"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

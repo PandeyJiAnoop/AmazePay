@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:ignore="NewApi">
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_arrow_back" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="17dp"
+                    android:gravity="center_vertical"
+                    android:text="Retailer KYC AEPS"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:background="#017066"
+                android:layout_height="2dp">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <TextView android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="17dp"
+                    android:text="KYC AEPS\nPlease Complete Your Kyc for Using AEPS"
+                    android:textColor="@color/black" />
+
+
+                <LinearLayout android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="18sp"
+                        android:textColor="#000"
+                        android:text="DOCUMENT REQUIREMNT :\n1- Retailer Original Pancard image\n2- Retailer Original AADHAR IMAGE image.\n3- Retailer STATE SHOULD match Aadhaar address.\nRetailer SHOULD NOT CONTAIN Special character\n\nComplete All Onboarding Steps:-\n" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="15dp"
+                    android:background="@color/ared"
+                    android:text="Click Now...."
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout android:visibility="gone"
+                android:id="@+id/after_aeps_ll"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="17dp"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:text="AEPS TWO FACTOR AUTHENTICATION BANK 2 *"
+                    android:textColor="@color/black" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="90dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_height="1dp" android:background="#363636"/>
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/background_shape"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <RadioGroup android:orientation="horizontal"
+                        android:id="@+id/radiodevice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="0dp" android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:text="Morpho" android:clickable="false"
+                            android:checked="true" />
+                        <RadioButton android:clickable="false"
+                            android:id="@+id/radioFemale"
+                            android:focusable="false"
+                            android:layout_width="0dp" android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Mantra" />
+                    </RadioGroup>
+                </LinearLayout>
+                <Button  android:layout_marginTop="15dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:backgroundTint="#7902C3"
+                    android:textSize="15dp"
+                    android:id="@+id/one"
+                    android:text="1-Take FingerPrint"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/two"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#7902C3"  android:textSize="15dp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text="2-Click Here For Registration"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/three"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#7902C3"  android:textSize="15dp"
+                        android:text="3-Daily Login Authenticate"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

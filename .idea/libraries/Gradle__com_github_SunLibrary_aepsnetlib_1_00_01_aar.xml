@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.SunLibrary:aepsnetlib:1.00.01@aar">
+    <CLASSES>
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/3cd6532cd9bce71cfc37516d170d996b/transformed/jetified-aepsnetlib-1.00.01/jars/classes.jar!/" />
+      <root url="file://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/3cd6532cd9bce71cfc37516d170d996b/transformed/jetified-aepsnetlib-1.00.01/res" />
+      <root url="file://C:/Program Files/Java/jdk-18.0.2/bin/caches/transforms-3/3cd6532cd9bce71cfc37516d170d996b/transformed/jetified-aepsnetlib-1.00.01/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://C:/Program Files/Java/jdk-18.0.2/bin/caches/modules-2/files-2.1/com.github.SunLibrary/aepsnetlib/1.00.01/4267bfb30c045d52bec4948b63cc09a9502b469f/aepsnetlib-1.00.01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
